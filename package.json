@@ -1,0 +1,19 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "promises-aplus-tests ./promise/a-promise.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liaozzzzzz/notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liaozzzzzz/notes/issues"
+  },
+  "homepage": "https://github.com/Liaozzzzzz/notes#readme",
+  "description": ""
+}
