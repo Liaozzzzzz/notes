@@ -155,31 +155,9 @@ APromise.resolve = function (param) {
     return param;
   }
 
-  const resultPromise = new APromise((resolve, reject) => {
-    setTimeout(() => {
-      // 1. 解决了resolve以后throw Error的场景
-      // 2. 解决了object.get once的场景:
-      //   function once(value) {
-      //     var numberOfTimesThenRetrieved = 0;
-      //     return Object.create(null, {
-      //       then: {
-      //         get: function () {
-      //           if (numberOfTimesThenRetrieved === 0) {
-      //             ++numberOfTimesThenRetrieved;
-      //             return function (onFulfilled) {
-      //               onFulfilled(value);
-      //             };
-      //           }
-      //           return null;
-      //         }
-      //       }
-      //     });
-      //   }
-      resolvePromise(resultPromise, param, resolve, reject);
-    });
+  return new APromise((resolve, reject) => {
+    resolvePromise(this, param, resolve, reject);
   });
-
-  return resultPromise;
 };
 
 APromise.reject = function (reason) {
