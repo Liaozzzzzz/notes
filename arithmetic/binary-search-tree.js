@@ -3,20 +3,7 @@
  * 左侧节点存储小值, 右侧节点存储大值
  */
 
-class Node {
-  constructor(key) {
-    this.key = key;
-    this.left = null;
-    this.right = null;
-  }
-}
-
-const Compare = {
-  LESS_THAN: -1,
-  BIGGER_THAN: 1,
-}
-
-const defaultCompare = (a, b) => a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN;
+const {Node, Compare, defaultCompare} = require('./utils');
 
 class BinarySearchTree {
   constructor(compareFn = defaultCompare) {
