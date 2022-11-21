@@ -1,4 +1,3 @@
-import {selectionSort} from "./selection";
 
 /**
  * 插入排序

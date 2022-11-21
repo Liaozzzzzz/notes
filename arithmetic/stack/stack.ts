@@ -3,6 +3,9 @@
  */
 
 class Stack {
+  count = 0;
+  items = {};
+
   constructor() {
     this.count = 0;
     this.items = {};
@@ -28,7 +31,7 @@ class Stack {
 
     this.count -= 1;
     const result = this.items[this.count];
-    Reflect.deleteProperty(result, this.count);
+    delete  this.items[this.count];
     return  result;
   }
 
@@ -37,7 +40,7 @@ class Stack {
       return  undefined;
     }
 
-    return this.items(this.count);
+    return this.items[this.count - 1];
   }
 
   toString() {
@@ -52,3 +55,5 @@ class Stack {
     return str;
   }
 }
+
+export default  Stack;

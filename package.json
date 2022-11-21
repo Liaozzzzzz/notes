@@ -15,5 +15,14 @@
     "url": "https://github.com/Liaozzzzzz/notes/issues"
   },
   "homepage": "https://github.com/Liaozzzzzz/notes#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "ts-node": "^10.7.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@type-challenges/utils": "^0.1.1"
+  }
 }
